@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: iperf-server-service
+  namespace: stunner
+spec:
+  selector:
+    app: iperf-server
+  ports:
+  - name: iperf
+    protocol: UDP
+    port: 5001
+    targetPort: 5001
+  type: ClusterIP

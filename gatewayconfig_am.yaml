@@ -1,0 +1,12 @@
+apiVersion: stunner.l7mp.io/v1alpha1
+kind: GatewayConfig
+metadata:
+  name: stunner-gatewayconfig
+  namespace: stunner
+spec:
+  logLevel: "all:DEBUG,turn:INFO"
+  realm: stunner.l7mp.io
+  authType: plaintext
+  userName: "alexandra"
+  password: "q1w2e3r4t5"
+  metricsEndpoint: "http://0.0.0.0:8080/metrics"
